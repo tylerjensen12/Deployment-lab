@@ -8,9 +8,11 @@ app.use(express.json())
 app.use(cors())
 
 
-const {home} = require("./controllers/pageCtrl")
+const {home, style, porpoise} = require("./controllers/pageCtrl")
 
 app.get("/", home)
+app.get('/css', style)
+app.get('/porpoise', porpoise)
 
 const {PORT} = process.env
 
